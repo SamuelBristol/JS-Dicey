@@ -1,0 +1,1154 @@
+{
+    "coins": {
+        "1": [
+            {
+                "roll": "01-14",
+                "reward": "No coins."
+            },
+            {
+                "roll": "15-29",
+                "reward": "1d6 × 1,000 cp"
+            },
+            {
+                "roll": "30-52",
+                "reward": "1d8 × 100 sp"
+            },
+            {
+                "roll": "53-95",
+                "reward": "2d8 × 10 gp"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d4 × 10 pp"
+            }
+        ],
+        "2": [
+            {
+                "roll": "01-13",
+                "reward": "No coins."
+            },
+            {
+                "roll": "14-23",
+                "reward": "1d10 × 1,000 cp"
+            },
+            {
+                "roll": "24-43",
+                "reward": "2d10 × 100 sp"
+            },
+            {
+                "roll": "44-95",
+                "reward": "4d10 × 10 gp"
+            },
+            {
+                "roll": "96-100",
+                "reward": "2d8 × 10 pp"
+            }
+        ],
+        "3": [
+            {
+                "roll": "01-11",
+                "reward": "No coins."
+            },
+            {
+                "roll": "12-21",
+                "reward": "2d10 × 1,000 cp"
+            },
+            {
+                "roll": "22-41",
+                "reward": "4d8 × 100 sp"
+            },
+            {
+                "roll": "42-95",
+                "reward": "1d4 × 100 gp"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d10 × 10 pp"
+            }
+        ],
+        "4": [
+            {
+                "roll": "01-11",
+                "reward": "No coins."
+            },
+            {
+                "roll": "12-21",
+                "reward": "3d10 × 1,000 cp"
+            },
+            {
+                "roll": "22-41",
+                "reward": "4d12 × 1,000 sp"
+            },
+            {
+                "roll": "42-95",
+                "reward": "1d6 × 100 gp"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d8 × 10 pp"
+            }
+        ],
+        "5": [
+            {
+                "roll": "01-10",
+                "reward": "No coins."
+            },
+            {
+                "roll": "11-19",
+                "reward": "1d4 × 10,000 cp"
+            },
+            {
+                "roll": "20-38",
+                "reward": "1d6 × 1,000 sp"
+            },
+            {
+                "roll": "39-95",
+                "reward": "1d8 × 100 gp"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d10 × 10 pp"
+            }
+        ],
+        "6": [
+            {
+                "roll": "01-10",
+                "reward": "No coins."
+            },
+            {
+                "roll": "11-18",
+                "reward": "1d6 × 10,000 cp"
+            },
+            {
+                "roll": "19-37",
+                "reward": "1d8 × 1,000 sp"
+            },
+            {
+                "roll": "38-95",
+                "reward": "1d10 × 100 gp"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d12 × 10 pp"
+            }
+        ],
+        "7": [
+            {
+                "roll": "01-11",
+                "reward": "No coins."
+            },
+            {
+                "roll": "12-18",
+                "reward": "1d10 × 10,000 cp"
+            },
+            {
+                "roll": "19-35",
+                "reward": "1d12 × 1,000 sp"
+            },
+            {
+                "roll": "36-93",
+                "reward": "2d6 × 100 gp"
+            },
+            {
+                "roll": "94-100",
+                "reward": "3d4 × 10 pp"
+            }
+        ],
+        "8": [
+            {
+                "roll": "01-10",
+                "reward": "No coins."
+            },
+            {
+                "roll": "11-15",
+                "reward": "1d12 × 10,000 cp"
+            },
+            {
+                "roll": "16-29",
+                "reward": "2d6 × 1,000 sp"
+            },
+            {
+                "roll": "30-87",
+                "reward": "2d8 × 100 gp"
+            },
+            {
+                "roll": "88-100",
+                "reward": "3d6 × 10 pp"
+            }
+        ],
+        "9": [
+            {
+                "roll": "01-10",
+                "reward": "No coins."
+            },
+            {
+                "roll": "11-15",
+                "reward": "2d6 × 10,000 cp"
+            },
+            {
+                "roll": "16-29",
+                "reward": "2d8 × 1,000 sp"
+            },
+            {
+                "roll": "30-85",
+                "reward": "5d4 × 100 gp"
+            },
+            {
+                "roll": "86-100",
+                "reward": "2d12 × 10 pp"
+            }
+        ],
+        "10": [
+            {
+                "roll": "01-10",
+                "reward": "No coins."
+            },
+            {
+                "roll": "11-24",
+                "reward": "2d10 × 1,000 sp"
+            },
+            {
+                "roll": "25-79",
+                "reward": "6d4 × 100 gp"
+            },
+            {
+                "roll": "80-100",
+                "reward": "5d6 × 10 pp"
+            }
+        ],
+        "11": [
+            {
+                "roll": "01-08",
+                "reward": "No coins."
+            },
+            {
+                "roll": "09-14",
+                "reward": "3d10 × 1,000 sp"
+            },
+            {
+                "roll": "15-75",
+                "reward": "4d8 × 100 gp"
+            },
+            {
+                "roll": "76-100",
+                "reward": "4d10 × 10 pp"
+            }
+        ],
+        "12": [
+            {
+                "roll": "01-08",
+                "reward": "No coins."
+            },
+            {
+                "roll": "09-14",
+                "reward": "3d12 × 1,000 sp"
+            },
+            {
+                "roll": "15-75",
+                "reward": "1d4 × 1,000 gp"
+            },
+            {
+                "roll": "76-100",
+                "reward": "1d4 × 100 pp"
+            }
+        ],
+        "13": [
+            {
+                "roll": "01-08",
+                "reward": "No coins."
+            },
+            {
+                "roll": "09-75",
+                "reward": "1d4 × 1,000 gp"
+            },
+            {
+                "roll": "76-100",
+                "reward": "1d10 × 100 pp"
+            }
+        ],
+        "14": [
+            {
+                "roll": "01-08",
+                "reward": "No coins."
+            },
+            {
+                "roll": "09-75",
+                "reward": "1d6 × 1,000 gp"
+            },
+            {
+                "roll": "76-100",
+                "reward": "1d12 × 100 pp"
+            }
+        ],
+        "15": [
+            {
+                "roll": "01-03",
+                "reward": "No coins."
+            },
+            {
+                "roll": "04-74",
+                "reward": "1d8 × 1,000 gp"
+            },
+            {
+                "roll": "75-100",
+                "reward": "3d4 × 100 pp"
+            }
+        ],
+        "16": [
+            {
+                "roll": "01-03",
+                "reward": "No coins."
+            },
+            {
+                "roll": "04-74",
+                "reward": "1d12 × 1,000 gp"
+            },
+            {
+                "roll": "75-100",
+                "reward": "3d4 × 100 pp"
+            }
+        ],
+        "17": [
+            {
+                "roll": "01-03",
+                "reward": "No coins."
+            },
+            {
+                "roll": "04-68",
+                "reward": "3d4 × 1,000 gp"
+            },
+            {
+                "roll": "69-100",
+                "reward": "2d10 × 100 pp"
+            }
+        ],
+        "18": [
+            {
+                "roll": "01-02",
+                "reward": "No coins."
+            },
+            {
+                "roll": "03-65",
+                "reward": "3d6 × 1,000 gp"
+            },
+            {
+                "roll": "66-100",
+                "reward": "5d4 × 100 pp"
+            }
+        ],
+        "19": [
+            {
+                "roll": "01-02",
+                "reward": "No coins."
+            },
+            {
+                "roll": "03-65",
+                "reward": "3d8 × 1,000 gp"
+            },
+            {
+                "roll": "66-100",
+                "reward": "3d10 × 100 pp"
+            }
+        ],
+        "20": [
+            {
+                "roll": "01-02",
+                "reward": "No coins."
+            },
+            {
+                "roll": "03-65",
+                "reward": "4d8 × 1,000 gp"
+            },
+            {
+                "roll": "66-100",
+                "reward": "4d10 × 100 pp"
+            }
+        ]
+    },
+    "goods": {
+        "1": [
+            {
+                "roll": "01-90",
+                "reward": "No goods."
+            },
+            {
+                "roll": "91-95",
+                "reward": "1 gem"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1 art"
+            }
+        ],
+        "2": [
+            {
+                "roll": "01-81",
+                "reward": "No goods."
+            },
+            {
+                "roll": "82-95",
+                "reward": "1d3 gems"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d3 art"
+            }
+        ],
+        "3": [
+            {
+                "roll": "01-77",
+                "reward": "No goods."
+            },
+            {
+                "roll": "78-95",
+                "reward": "1d3 gems"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d3 art"
+            }
+        ],
+        "4": [
+            {
+                "roll": "01-70",
+                "reward": "No goods."
+            },
+            {
+                "roll": "71-95",
+                "reward": "1d4 gems"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d3 art"
+            }
+        ],
+        "5": [
+            {
+                "roll": "01-60",
+                "reward": "No goods."
+            },
+            {
+                "roll": "61-95",
+                "reward": "1d4 gems"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1d4 art"
+            }
+        ],
+        "6": [
+            {
+                "roll": "01-56",
+                "reward": "No goods."
+            },
+            {
+                "roll": "57-92",
+                "reward": "1d4 gems"
+            },
+            {
+                "roll": "93-100",
+                "reward": "1d4 art"
+            }
+        ],
+        "7": [
+            {
+                "roll": "01-48",
+                "reward": "No goods."
+            },
+            {
+                "roll": "49-88",
+                "reward": "1d4 gems"
+            },
+            {
+                "roll": "89-100",
+                "reward": "1d4 art"
+            }
+        ],
+        "8": [
+            {
+                "roll": "01-45",
+                "reward": "No goods."
+            },
+            {
+                "roll": "46-85",
+                "reward": "1d6 gems"
+            },
+            {
+                "roll": "86-100",
+                "reward": "1d4 art"
+            }
+        ],
+        "9": [
+            {
+                "roll": "01-40",
+                "reward": "No goods."
+            },
+            {
+                "roll": "41-80",
+                "reward": "1d8 gems"
+            },
+            {
+                "roll": "81-100",
+                "reward": "1d4 art"
+            }
+        ],
+        "10": [
+            {
+                "roll": "01-35",
+                "reward": "No goods."
+            },
+            {
+                "roll": "36-79",
+                "reward": "1d8 gems"
+            },
+            {
+                "roll": "80-100",
+                "reward": "1d6 art"
+            }
+        ],
+        "11": [
+            {
+                "roll": "01-24",
+                "reward": "No goods."
+            },
+            {
+                "roll": "25-74",
+                "reward": "1d10 gems"
+            },
+            {
+                "roll": "75-100",
+                "reward": "1d6 art"
+            }
+        ],
+        "12": [
+            {
+                "roll": "01-17",
+                "reward": "No goods."
+            },
+            {
+                "roll": "18-70",
+                "reward": "1d10 gems"
+            },
+            {
+                "roll": "71-100",
+                "reward": "1d8 art"
+            }
+        ],
+        "13": [
+            {
+                "roll": "01-11",
+                "reward": "No goods."
+            },
+            {
+                "roll": "12-66",
+                "reward": "1d12 gems"
+            },
+            {
+                "roll": "67-100",
+                "reward": "1d10 art"
+            }
+        ],
+        "14": [
+            {
+                "roll": "01-11",
+                "reward": "No goods."
+            },
+            {
+                "roll": "12-66",
+                "reward": "2d8 gems"
+            },
+            {
+                "roll": "67-100",
+                "reward": "2d6 art"
+            }
+        ],
+        "15": [
+            {
+                "roll": "01-09",
+                "reward": "No goods."
+            },
+            {
+                "roll": "10-65",
+                "reward": "2d10 gems"
+            },
+            {
+                "roll": "66-100",
+                "reward": "2d8 art"
+            }
+        ],
+        "16": [
+            {
+                "roll": "01-07",
+                "reward": "No goods."
+            },
+            {
+                "roll": "08-64",
+                "reward": "4d6 gems"
+            },
+            {
+                "roll": "65-100",
+                "reward": "2d10 art"
+            }
+        ],
+        "17": [
+            {
+                "roll": "01-04",
+                "reward": "No goods."
+            },
+            {
+                "roll": "05-63",
+                "reward": "4d8 gems"
+            },
+            {
+                "roll": "64-100",
+                "reward": "3d8 art"
+            }
+        ],
+        "18": [
+            {
+                "roll": "01-04",
+                "reward": "No goods."
+            },
+            {
+                "roll": "05-54",
+                "reward": "3d12 gems"
+            },
+            {
+                "roll": "55-100",
+                "reward": "3d10 art"
+            }
+        ],
+        "19": [
+            {
+                "roll": "01-03",
+                "reward": "No goods."
+            },
+            {
+                "roll": "04-50",
+                "reward": "6d6 gems"
+            },
+            {
+                "roll": "51-100",
+                "reward": "6d6 art"
+            }
+        ],
+        "20": [
+            {
+                "roll": "01-02",
+                "reward": "No goods."
+            },
+            {
+                "roll": "03-38",
+                "reward": "4d10 gems"
+            },
+            {
+                "roll": "39-100",
+                "reward": "7d6 art"
+            }
+        ]
+    },
+    "items": {
+        "1": [
+            {
+                "roll": "01-71",
+                "reward": "No items."
+            },
+            {
+                "roll": "72-95",
+                "reward": "1 mundane"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1 minor"
+            }
+        ],
+        "2": [
+            {
+                "roll": "01-49",
+                "reward": "No items."
+            },
+            {
+                "roll": "50-85",
+                "reward": "1 mundane"
+            },
+            {
+                "roll": "86-100",
+                "reward": "1 minor"
+            }
+        ],
+        "3": [
+            {
+                "roll": "01-49",
+                "reward": "No items."
+            },
+            {
+                "roll": "50-79",
+                "reward": "1d3 mundane"
+            },
+            {
+                "roll": "80-100",
+                "reward": "1 minor"
+            }
+        ],
+        "4": [
+            {
+                "roll": "01-42",
+                "reward": "No items."
+            },
+            {
+                "roll": "43-62",
+                "reward": "1d4 mundane"
+            },
+            {
+                "roll": "63-100",
+                "reward": "1 minor"
+            }
+        ],
+        "5": [
+            {
+                "roll": "01-57",
+                "reward": "No items."
+            },
+            {
+                "roll": "58-67",
+                "reward": "1d4 mundane"
+            },
+            {
+                "roll": "68-100",
+                "reward": "1d3 minor"
+            }
+        ],
+        "6": [
+            {
+                "roll": "01-54",
+                "reward": "No items."
+            },
+            {
+                "roll": "55-59",
+                "reward": "1d4 mundane"
+            },
+            {
+                "roll": "60-99",
+                "reward": "1d3 minor"
+            },
+            {
+                "roll": "100",
+                "reward": "1 medium"
+            }
+        ],
+        "7": [
+            {
+                "roll": "01-51",
+                "reward": "No items."
+            },
+            {
+                "roll": "52-97",
+                "reward": "1d3 minor"
+            },
+            {
+                "roll": "98-100",
+                "reward": "1 medium"
+            }
+        ],
+        "8": [
+            {
+                "roll": "01-48",
+                "reward": "No items."
+            },
+            {
+                "roll": "49-96",
+                "reward": "1d4 minor"
+            },
+            {
+                "roll": "97-100",
+                "reward": "1 medium"
+            }
+        ],
+        "9": [
+            {
+                "roll": "01-43",
+                "reward": "No items."
+            },
+            {
+                "roll": "44-91",
+                "reward": "1d4 minor"
+            },
+            {
+                "roll": "92-100",
+                "reward": "1 medium"
+            }
+        ],
+        "10": [
+            {
+                "roll": "01-40",
+                "reward": "No items."
+            },
+            {
+                "roll": "41-88",
+                "reward": "1d4 minor"
+            },
+            {
+                "roll": "89-99",
+                "reward": "1 medium"
+            },
+            {
+                "roll": "100",
+                "reward": "1 major"
+            }
+        ],
+        "11": [
+            {
+                "roll": "01-31",
+                "reward": "No items."
+            },
+            {
+                "roll": "32-84",
+                "reward": "1d4 minor"
+            },
+            {
+                "roll": "85-98",
+                "reward": "1 medium"
+            },
+            {
+                "roll": "99-100",
+                "reward": "1 major"
+            }
+        ],
+        "12": [
+            {
+                "roll": "01-27",
+                "reward": "No items."
+            },
+            {
+                "roll": "28-82",
+                "reward": "1d6 minor"
+            },
+            {
+                "roll": "83-97",
+                "reward": "1 medium"
+            },
+            {
+                "roll": "98-100",
+                "reward": "1 major"
+            }
+        ],
+        "13": [
+            {
+                "roll": "01-19",
+                "reward": "No items."
+            },
+            {
+                "roll": "20-73",
+                "reward": "1d6 minor"
+            },
+            {
+                "roll": "74-95",
+                "reward": "1 medium"
+            },
+            {
+                "roll": "96-100",
+                "reward": "1 major"
+            }
+        ],
+        "14": [
+            {
+                "roll": "01-19",
+                "reward": "No items."
+            },
+            {
+                "roll": "20-58",
+                "reward": "1d6 minor"
+            },
+            {
+                "roll": "59-92",
+                "reward": "1 medium"
+            },
+            {
+                "roll": "93-100",
+                "reward": "1 major"
+            }
+        ],
+        "15": [
+            {
+                "roll": "01-11",
+                "reward": "No items."
+            },
+            {
+                "roll": "12-46",
+                "reward": "1d10 minor"
+            },
+            {
+                "roll": "47-90",
+                "reward": "1 medium"
+            },
+            {
+                "roll": "91-100",
+                "reward": "1 major"
+            }
+        ],
+        "16": [
+            {
+                "roll": "01-40",
+                "reward": "No items."
+            },
+            {
+                "roll": "41-46",
+                "reward": "1d10 minor"
+            },
+            {
+                "roll": "47-90",
+                "reward": "1d3 medium"
+            },
+            {
+                "roll": "91-100",
+                "reward": "1 major"
+            }
+        ],
+        "17": [
+            {
+                "roll": "01-33",
+                "reward": "No items."
+            },
+            {
+                "roll": "34-83",
+                "reward": "1d3 medium"
+            },
+            {
+                "roll": "84-100",
+                "reward": "1 major"
+            }
+        ],
+        "18": [
+            {
+                "roll": "01-24",
+                "reward": "No items."
+            },
+            {
+                "roll": "25-80",
+                "reward": "1d4 medium"
+            },
+            {
+                "roll": "81-100",
+                "reward": "1 major"
+            }
+        ],
+        "19": [
+            {
+                "roll": "01-04",
+                "reward": "No items."
+            },
+            {
+                "roll": "05-70",
+                "reward": "1d4 medium"
+            },
+            {
+                "roll": "71-100",
+                "reward": "1 major"
+            }
+        ],
+        "20": [
+            {
+                "roll": "01-25",
+                "reward": "No items."
+            },
+            {
+                "roll": "26-65",
+                "reward": "1d4 medium"
+            },
+            {
+                "roll": "66-100",
+                "reward": "1d3 major"
+            }
+        ]
+    },
+    "gems": [
+        {
+            "roll": "01-25",
+            "reward": "4d4 gp",
+            "examples": [
+                "Banded, eye, or moss agate",
+                "azurite",
+                "blue quartz",
+                "hematite",
+                "lapis lazuli",
+                "malachite",
+                "obsidian",
+                "rhodochrosite",
+                "tiger eye turquoise",
+                "freshwater (irregular) pearl"
+            ]
+        },
+        {
+            "roll": "26-50",
+            "reward": "2d4 × 10 gp",
+            "examples": [
+                "Bloodstone",
+                "carnelian",
+                "chalcedony",
+                "chrysoprase",
+                "citrine",
+                "iolite, jasper",
+                "moonstone",
+                "onyx",
+                "peridot",
+                "rock crystal (clear quartz)",
+                "sard",
+                "sardonyx",
+                "rose, smoky, or star rose quartz",
+                "zircon"
+            ]
+        },
+        {
+            "roll": "51-70",
+            "reward": "4d4 × 10 gp",
+            "examples": [
+                "Amber",
+                "amethyst",
+                "chrysoberyl",
+                "coral",
+                "red or brown-green garnet",
+                "jade",
+                "jet",
+                "white, golden, pink, or silver pearl",
+                "red spinel, red-brown or deep green spinel",
+                "tourmaline"
+            ]
+        },
+        {
+            "roll": "71-90",
+            "reward": "2d4 × 100 gp",
+            "examples": [
+                "Alexandrite",
+                "aquamarine",
+                "violet garnet",
+                "black pearl",
+                "deep blue spinel",
+                "golden yellow topaz"
+            ]
+        },
+        {
+            "roll": "91-99",
+            "reward": "4d4 × 100 gp",
+            "examples": [
+                "Emerald",
+                "white, black, or fire opal",
+                "blue sapphire",
+                "fiery yellow or rich purple corundum",
+                "blue or black star sapphire",
+                "star ruby"
+            ]
+        },
+        {
+            "roll": "100",
+            "reward": "2d4 × 1,000 gp",
+            "examples": [
+                "Clearest bright green emerald",
+                "blue-white, canary, pink, brown, or blue diamond",
+                "jacinth"
+            ]
+        }
+    ],
+    "art": [
+        {
+            "roll": "01-10",
+            "reward": "1d10 × 10 gp",
+            "examples": [
+                "Silver ewer",
+                "carved bone or ivory statuette",
+                "finely wrought small gold bracelet"
+            ]
+        },
+        {
+            "roll": "11-25",
+            "reward": "3d6 × 10 gp",
+            "examples": [
+                "Cloth of gold vestments",
+                "black velvet mask with numerous citrines",
+                "silver chalice with lapis lazuli gems"
+            ]
+        },
+        {
+            "roll": "26-40",
+            "reward": "1d6 × 100 gp",
+            "examples": [
+                "Large well-done wool tapestry",
+                "brass mug with jade inlays"
+            ]
+        },
+        {
+            "roll": "41-50",
+            "reward": "1d10 × 100 gp",
+            "examples": [
+                "Silver comb with moonstones",
+                "silver-plated steel longsword with jet jewel in hilt"
+            ]
+        },
+        {
+            "roll": "51-60",
+            "reward": "2d6 × 100 gp",
+            "examples": [
+                "Carved harp of exotic wood with ivory inlay and zircon gems",
+                "solid gold idol (10 lb.)"
+            ]
+        },
+        {
+            "roll": "61-70",
+            "reward": "3d6 × 100 gp",
+            "examples": [
+                "Gold dragon comb with red garnet eye",
+                "gold and topaz bottle stopper cork",
+                "ceremonial electrum dagger with a star ruby in the pommel"
+            ]
+        },
+        {
+            "roll": "71-80",
+            "reward": "4d6 × 100 gp",
+            "examples": [
+                "Eyepatch with mock eye of sapphire and moonstone",
+                "fire opal pendant on a fine gold chain",
+                "old masterpiece painting"
+            ]
+        },
+        {
+            "roll": "81-85",
+            "reward": "5d6 × 100 gp",
+            "examples": [
+                "Embroidered silk and velvet mantle with numerous moonstones",
+                "sapphire pendant on gold chain"
+            ]
+        },
+        {
+            "roll": "86-90",
+            "reward": "1d4 × 1,000 gp",
+            "examples": [
+                "Embroidered and bejeweled glove",
+                "jeweled anklet",
+                "gold music box"
+            ]
+        },
+        {
+            "roll": "91-95",
+            "reward": "1d6 × 1,000 gp",
+            "examples": [
+                "Golden circlet with four aquamarines",
+                "a string of small pink pearls (necklace)"
+            ]
+        },
+        {
+            "roll": "96-99",
+            "reward": "2d4 × 1,000 gp",
+            "examples": [
+                "Jeweled gold crown",
+                "jeweled electrum ring"
+            ]
+        },
+        {
+            "roll": "100",
+            "reward": "2d6 × 1,000 gp",
+            "examples": [
+                "Gold and ruby ring",
+                "gold cup set with emeralds"
+            ]
+        }
+    ]
+}

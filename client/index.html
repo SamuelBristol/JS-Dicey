@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
+
+  <title>Dicey - The D20 Solution</title>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <style>
+    body {
+      padding-top: 60px;
+      background-color: #aaa;
+    }
+    
+    /* Hide the spinner increment/decerement arrows for number inputs 
+       on webkit browsers
+    */
+    input[type='number'] {
+      -moz-appearance:textfield;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+  </style>
+</head>
+<body class="container">
+  
+  <h1 class="text-center text-uppercase"><img src="img/d4.png" />Dicey<br /><small>The D20 Solution</small></h1>
+  
+  <form id="diceBag" class="form col-xs-12 col-sm-6" role="form">
+    
+    <h2 class="text-center text-uppercase">Dice Bag<br /><small>Click a die to roll!</small></h2>
+    
+    <div id="d100" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d100.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+    <div id="d4" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d4.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+    <div id="d6" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d6.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+    <div id="d8" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d8.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+    <div id="d10" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d10.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+    <div id="d12" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d12.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+    <div id="d20" class="col-xs-4 col-sm-4 panel panel-default">
+      <div class="panel-body">
+        <img class="center-block" src="img/d20.png" />
+      </div>
+      <div class="panel-footer text-center">Roll me</div>
+    </div>
+    
+  </form>
+  
+  <form class="form col-xs-12 col-sm-6" role="form">
+    
+    <h2 class="text-center text-uppercase">Treasure Generator<br /><small>Pick a Challenge Rating & Roll Type<br />Click the 'Generate' button!</small></h2>
+    
+    <div class="form-group">
+      <label for="challengeRating">Challenge Rating: <span id="ratingDisplay">01</span></label>
+      <input class="form-control" type="range" id="challengeRating" min="1" value="01" max="20" step="1" oninput="updateRating(this.value);" onchange="updateRating(this.value);">
+    </div>
+      
+    <div class="form-group">
+      <label for="rollType">Roll Type:</label>
+      <select id="rollType" name="rollType" class="form-control">
+        <option value="1">Standard</option>
+        <option value="2">2x Standard</option>
+        <option value="3">2x Coins</option>
+        <option value="4">2x Goods</option>
+        <option value="5">2x Items</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <input type="button" class="btn btn-default form-control" id="generate" value="Generate Loot" />
+    </div>
+    
+    <div class="form-group">
+      <label for="outputCoins">Coins:</label>
+      <textarea id="outputCoins" class="form-control"></textarea><br />
+    </div>
+    
+    <div class="form-group">
+      <label for="outputGoods">Goods:</label>
+      <textarea id="outputGoods" class="form-control"></textarea><br />
+    </div>
+    
+    <div class="form-group">
+      <label for="outputItems">Items:</label>
+      <textarea id="outputItems" class="form-control"></textarea><br />
+    </div>
+
+  </form>
+  
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script type="text/javascript" src="treasure.js"></script>
+<script>
+  var treasure = treasure; // JSON resource as .js file
+ 
+  function rollDice(howManyDice, dieType){
+    // Roll any given d20 die a given number of times
+    // Returns the total of all rolled dice
+    
+    var result = 0;
+    
+    for(var i = 0; i < howManyDice; i++){
+      result += getRandomIntInclusive(1, dieType);
+    }
+    
+    return result;
+  }; // end function rollDie
+  
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  }; // end String prototype extension for function capitilize
+  
+  function updateRating(value) {
+    if (value != '' && value < 10) {
+      value = '0' + value;
+    }
+    $('#ratingDisplay').text(value);
+  }; // end function updateRating
+  
+  function getRandomIntInclusive(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }; // end function getRandomIntInclusive
+  
+  function getLoot(challengeRating, rollType) {
+    switch (rollType) {
+      case 1:
+        doLootRoll(challengeRating, 1, 1, 1, treasure);
+        break;
+      case 2:
+        doLootRoll(challengeRating, 2, 2, 2, treasure);
+        break;
+      case 3:
+        doLootRoll(challengeRating, 2, 1, 1, treasure);
+        break;
+      case 4:
+        doLootRoll(challengeRating, 1, 2, 1, treasure);
+        break;
+      case 5:
+        doLootRoll(challengeRating, 1, 1, 2, treasure);
+        break;
+      default:
+        console.log('Error occurred. Default switch case reached.');
+    }
+  }; // end function getLoot
+  
+  function doLootRoll(challengeRating, coinRolls, goodRolls, itemRolls, treasure) {
+    // Do all coin rolls
+    var allCoinRolls = "";
+    for(var i = 0; i < coinRolls; i++) {
+      // Get coin roll and reward
+      allCoinRolls += rollCoins(getRandomIntInclusive(1, 100), treasure.coins[challengeRating]) + '\n';
+    }
+    
+    // Do all goods rolls
+    var allGoodRolls = "";
+    for(var j = 0; j < goodRolls; j++) {
+      // Get goods roll and reward
+      allGoodRolls += rollGeneralGoods(getRandomIntInclusive(1, 100), treasure.goods[challengeRating]) + '\n';
+    }
+    
+    // Do all item rolls
+    var allItemRolls = "";
+    for(var k = 0; k < itemRolls; k++) {
+      // Get item roll and reward
+      allItemRolls += rollItems(getRandomIntInclusive(1, 100), treasure.items[challengeRating]) + '\n';
+    }
+    
+    // Set HTML output
+    $('#outputCoins').text(allCoinRolls);
+    $('#outputGoods').text(allGoodRolls);
+    $('#outputItems').text(allItemRolls);
+    
+  }; // end function doLootRoll
+  
+  function rollItems(roll, listOfItems) {
+    var result = "";
+    
+    listOfItems.forEach(function(element, index){
+      // Get the roll range and reward
+      var lowRoll = Number( (element.roll.split('-'))[0] );
+      var highRoll = Number( (element.roll.split('-'))[1] );
+      
+      var reward = element.reward;
+      var rewardSplit = reward.split(' ');
+      
+      var dieRollStr = rewardSplit[0];
+      var itemType = rewardSplit[1];
+      
+      if(rollInRange(roll, lowRoll, highRoll)){
+        // Let's do better than a lazy switch here sometime (...soon)
+        if (dieRollStr == 'No') {
+          // No items.
+          result = reward;
+        } else if (Number(dieRollStr) == 1) {
+          // 1 mundane/minor/medium/major item
+          result = rollWondrous(getRandomIntInclusive(1, 100), treasure[itemType + 'WondrousItems']);
+        } else {
+          // ex: 7d6 major/minor/mundane, etc
+          var numDice = Number( (dieRollStr.split('d'))[0] );
+          var dieType = Number( (dieRollStr.split('d'))[1] );
+          
+          // Get the correct number of items from rolling the dice
+          var totalItems = rollDice(numDice, dieType);
+          
+          // Generate all the items according to their type
+          for (var j = 0; j < totalItems; j++) {
+            
+            if(itemType == 'minor' ||
+               itemType == 'medium' ||
+               itemType == 'major') {
+              result = rollWondrous(getRandomIntInclusive(1, 100), treasure[itemType + 'WondrousItems']);
+            } else {
+              // mundane items
+              result = rollMundane(getRandomIntInclusive(1, 100), treasure.mundaneWondrousItems);
+            }
+          } // end item generation
+          
+        } // end else multiple items
+        
+      } // end if within roll range
+      
+    }); // end foreach in listOfItems
+    
+    return result;
+  }; // end function rollItems
+  
+  function rollGeneralGoods(roll, listOfGoods) {
+    var result = "";
+    
+    listOfGoods.forEach(function(element, index) {
+      // Get the roll range and reward
+      var lowRoll = Number( (element.roll.split('-'))[0] );
+      var highRoll = Number( (element.roll.split('-'))[1] );
+      var reward = element.reward;
+      
+      if(rollInRange(roll, lowRoll, highRoll)){
+        // Find a better solution than a lazy switch
+        if(reward == 'No goods.'){
+          // No reward, just cascade value
+          result = reward;
+          
+        } else if (reward == '1 gem.'){
+          // Generate a random gem
+          result = rollGoods(getRandomIntInclusive(1, 100), treasure.gems);
+          
+        } else if (reward == '1 art.') {
+          // Generate a random art
+          result = rollGoods(getRandomIntInclusive(1, 100), treasure.art);
+          
+        } else {
+          // ex: 7d6 art/gems
+          var rewardSplit = reward.split(' ');
+          var dieRollStr = rewardSplit[0];
+          var goodType = rewardSplit[1];
+          
+          var numDice = Number( (dieRollStr.split('d'))[0] );
+          var dieType = Number( (dieRollStr.split('d'))[1] );
+          
+          // Get the total number of goods from dice rolls
+          var totalGoods = rollDice(numDice, dieType);
+          
+          // Determine whether to generate gems or art
+          if(goodType == 'art') {
+            // Generate art
+            for(var i = 0; i < totalGoods; i++) {
+              result += rollGoods(getRandomIntInclusive(1, 100), treasure.art);
+            }
+            
+          } else {
+            // Generate a gem
+            for(var i = 0; i < totalGoods; i++) {
+              result += rollGoods(getRandomIntInclusive(1, 100), treasure.gems);
+            }
+            
+          } 
+          
+        }
+          
+      } // end if goodsRoll in range
+      
+    }); // end goods foreach
+    
+    return result;
+  }; // end function rollGeneralGoods
+  
+  function rollGoods(roll, listOfGoods) {
+    var result = "";
+    
+    listOfGoods.forEach(function(element, index){
+      // Get the roll range and reward
+      var lowRoll = Number( (element.roll.split('-'))[0] );
+      var highRoll = Number( (element.roll.split('-'))[1] );
+      var reward = element.reward;
+      var examples = element.examples;
+      
+      if(rollInRange(roll, lowRoll, highRoll)){
+        // roll is within range
+        var rewardSplit = reward.split(/[\s]/);
+        
+        // Get the proper die roll
+        var dieRollStr = rewardSplit[0];
+        var numDice = Number( (dieRollStr.split('d'))[0] );
+        var dieType = Number( (dieRollStr.split('d'))[1] );
+        
+        var numCoins;
+        var currencyType;
+        
+        if(rewardSplit.length == 2){
+          // ex: 4d6 gp
+          numCoins = 1;
+          currencyType = rewardSplit[1];
+          
+        } else {
+          // ex: 4d6 x 1,000 GP
+          numCoins = Number( rewardSplit[2].replace(',', '') );
+          currencyType = rewardSplit[3];
+          
+        }
+        
+        var totalValue = rollDice(numDice, dieType);
+        
+        result = examples[getRandomIntInclusive(0, examples.length - 1)] + " worth " + totalValue + currencyType + '\n';
+      
+      } else { /* do nothing */ } // end if roll within range
+      
+    });
+    
+    return result.capitalize();
+  }; // end function rollGoods
+  
+  function rollCoins(roll, listOfCoins) {
+    var result = "";
+
+    listOfCoins.forEach(function(element, index){
+      // Get the roll range and reward
+      var lowRoll = Number( (element.roll.split('-'))[0] );
+      var highRoll = Number( (element.roll.split('-'))[1] );
+      var reward = element.reward;
+      
+      if(rollInRange(roll, lowRoll, highRoll)){
+        if(reward == 'No coins.'){
+          result = reward;
+        } else {
+          var rewardSplit = reward.split(/[\s\×]/);
+          
+          console.log(reward);
+          console.log(rewardSplit);
+          
+          var dieRollStr = rewardSplit[0];
+          var numDice = Number( (dieRollStr.split('d'))[0] );
+          var dieType = Number( (dieRollStr.split('d'))[1] );
+          
+          var numCoins = Number( rewardSplit[2].replace(',', '') );
+          var currencyType = rewardSplit[3];
+          
+          var totalValue = rollDice(numDice, dieType);
+          
+          result = (totalValue * numCoins) + currencyType;
+        }
+        
+      } // end if within low/high roll
+      
+    }); // end foreach
+    
+    return result;
+  }; // end function rollCoins
+  
+  function rollInRange(roll, lowNum, highNum){
+    // returns true if target >= lowNum && <= highNum
+    if(roll >= lowNum && roll <= highNum){
+      return true;
+    }
+    
+    return false;
+  } // end function rollInRange
+  
+  function rollMundane(roll, listOfMundane) {
+    var result = "";
+    
+    listOfMundane.foreach(function(index, element){
+      // Get the roll range and reward
+      var lowRoll = Number( (element.roll.split('-'))[0] );
+      var highRoll = Number( (element.roll.split('-'))[1] );
+      var reward = element.reward;
+      
+      if (rollInRange(roll, lowRoll, highRoll)) {
+        // Item is within range
+        var rewardSplit = reward.split(' ');
+        var mundaneItemType = rewardSplit[0].toLowerCase();
+        if (mundaneItemType == 'alchemical') {
+          // generate an alchemical item
+          result = rollSpecificItem(roll, treasure.alchemyItems);
+        } else if (mundaneItemType == 'armor') {
+          // generate an armor item
+          result = rollSpecificItem(roll, treasure.armorItems);
+        } else if (mundaneItemType == 'weapons') {
+          // generate a weapon item
+          result = rollSpecificItem(roll, treasure.weaponItems);
+        } else {
+          // generate a tool item
+          result = rollSpecificItem(roll, treasure.toolItems);
+        }
+      }
+      
+    });
+    
+  }; // end function rollMundane
+  
+  function rollSpecificItem(roll, treasureList) {
+    var result = '';
+    
+    treasureList.foreach(function(index, element){
+      // Get the roll range and reward
+      var lowRoll = Number( (element.roll.split('-'))[0] );
+      var highRoll = Number( (element.roll.split('-'))[1] );
+      var reward = element.reward;
+      
+      if (roll >= lowRoll && roll <= highRoll) {
+        result = reward;
+      }
+      
+    });
+    
+    return result;
+  }; // end function rollSpecificItem
+  
+  function rollWondrous(roll, wondrousItems) {
+    // Expecting a 1 - 100 roll, so force index 0 - 99
+    var loot = wondrousItems[roll - 1];
+    
+    return loot.reward + ' worth ' + loot.marketPrice;
+  }; // end function rollWondrous
+  
+  $('#generate').click(function(e){
+    
+    var rollType = Number( $('#rollType').val() );
+    var challengeRating = Number( $('#challengeRating').val() );
+    
+    getLoot(challengeRating, rollType);
+    
+  }); // end #generate click handler
+  
+  $('#diceBag div.panel').click(function(e){
+    var numDice = 1;
+    var dieType = Number( $(this).attr('id').replace('d', '') );
+    
+    $(this).children('div.panel-footer').text(rollDice(numDice, dieType));
+  }); // end #dicebag div.panel click handler
+</script>
+  
+  
+</body>
+</html>
