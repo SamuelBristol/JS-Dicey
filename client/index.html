@@ -50,49 +50,49 @@
     
     <h2 class="text-center text-uppercase">Dice Bag<br /><small>Click a die to roll!</small></h2>
     
-    <div id="d100" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d100" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d100.png" />
       </div>
       <div class="panel-footer text-center">Roll me</div>
     </div>
     
-    <div id="d4" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d4" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d4.png" />
       </div>
       <div class="panel-footer text-center">Roll me</div>
     </div>
     
-    <div id="d6" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d6" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d6.png" />
       </div>
       <div class="panel-footer text-center">Roll me</div>
     </div>
     
-    <div id="d8" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d8" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d8.png" />
       </div>
       <div class="panel-footer text-center">Roll me</div>
     </div>
     
-    <div id="d10" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d10" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d10.png" />
       </div>
       <div class="panel-footer text-center">Roll me</div>
     </div>
     
-    <div id="d12" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d12" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d12.png" />
       </div>
       <div class="panel-footer text-center">Roll me</div>
     </div>
     
-    <div id="d20" class="col-xs-4 col-sm-4 panel panel-default">
+    <div id="d20" class="col-xs-4 col-sm-3 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d20.png" />
       </div>
@@ -498,7 +498,15 @@
     var numDice = 1;
     var dieType = Number( $(this).attr('id').replace('d', '') );
     
-    $(this).children('div.panel-footer').text(rollDice(numDice, dieType));
+    var footerText = rollDice(numDice, dieType);
+    var $footer = $(this).children('div.panel-footer');
+    
+    $footer.text("ROLLING");
+    
+    $footer.fadeOut('slow', function(){
+      $footer.text(footerText).stop().fadeIn('slow');
+    });
+    
   }); // end #dicebag div.panel click handler
 </script>
   
