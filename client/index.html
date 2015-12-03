@@ -40,63 +40,116 @@
     input::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
+	
+	/* Responsive CSS for circles and vertically aligned text
+	   Author: https://github.com/littledice
+	   From: http://littledice.me/2014/04/16/responsive-circles-with-css/
+	   Date Gathered: 12/2/2015
+	*/
+	.circle {
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 50%;
+		width: 100%;
+		position: relative;
+	}
+	
+	.circle:before {
+		content: "";
+		display: block;
+		padding-top: 100%;
+	}
+
+	.circle-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		text-align: center;
+	}
   </style>
 </head>
 <body class="container">
   
   <h1 class="text-center text-uppercase"><img src="img/d4.png" />Dicey<br /><small>The D20 Solution</small></h1>
   
+  <form id="attributeRoller" class="form col-xs-12 col-sm-8 col-sm-offset-2" role="form">
+	
+	<div class="col-xs-4">
+		<img src="http://placehold.it/100x100" class="img-circle" />
+		<span class="attribute text-center">STR</span>
+	</div>
+	<div class="col-xs-4">
+		<img src="http://placehold.it/100x100" class="img-circle" />
+		<span class="attribute text-center">CON</span>
+	</div>
+	<div class="col-xs-4">
+		<img src="http://placehold.it/100x100" class="img-circle" />
+	</div>
+	<div class="col-xs-4">
+		<img src="http://placehold.it/100x100" class="img-circle" />
+	</div>
+	<div class="col-xs-4">
+		<img src="http://placehold.it/100x100" class="img-circle" />
+	</div>
+	<div class="col-xs-4">
+		<img src="http://placehold.it/100x100" class="img-circle" />
+	</div>
+	
+  </form>
+  
   <form id="diceBag" class="form col-xs-12 col-sm-6" role="form">
     
     <h2 class="text-center text-uppercase">Dice Bag<br /><small>Click a die to roll!</small></h2>
     
-    <div id="d100" class="col-xs-4 col-sm-3 panel panel-default">
-      <div class="panel-body">
-        <img class="center-block" src="img/d100.png" />
-      </div>
-      <div class="panel-footer text-center">Roll me</div>
+    <div id="d100" class="col-xs-6 col-md-4 panel panel-default">
+        <div class="panel-body">
+          <img class="center-block" src="img/d100.png" />
+        </div>
+        <div class="panel-footer text-center">d100</div>
     </div>
     
-    <div id="d4" class="col-xs-4 col-sm-3 panel panel-default">
+    <div id="d4" class="col-xs-6 col-md-4 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d4.png" />
       </div>
-      <div class="panel-footer text-center">Roll me</div>
+      <div class="panel-footer text-center">d4</div>
     </div>
     
-    <div id="d6" class="col-xs-4 col-sm-3 panel panel-default">
+    <div id="d6" class="col-xs-6 col-md-4 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d6.png" />
       </div>
-      <div class="panel-footer text-center">Roll me</div>
+      <div class="panel-footer text-center">d6</div>
     </div>
     
-    <div id="d8" class="col-xs-4 col-sm-3 panel panel-default">
+    <div id="d8" class="col-xs-6 col-md-4 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d8.png" />
       </div>
-      <div class="panel-footer text-center">Roll me</div>
+      <div class="panel-footer text-center">d8</div>
     </div>
     
-    <div id="d10" class="col-xs-4 col-sm-3 panel panel-default">
+    <div id="d10" class="col-xs-6 col-md-4 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d10.png" />
       </div>
-      <div class="panel-footer text-center">Roll me</div>
+      <div class="panel-footer text-center">d10</div>
     </div>
     
-    <div id="d12" class="col-xs-4 col-sm-3 panel panel-default">
+    <div id="d12" class="col-xs-6 col-md-4 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d12.png" />
       </div>
-      <div class="panel-footer text-center">Roll me</div>
+      <div class="panel-footer text-center">d12</div>
     </div>
     
-    <div id="d20" class="col-xs-4 col-sm-3 panel panel-default">
+    <div id="d20" class="col-xs-6 col-md-4 panel panel-default">
       <div class="panel-body">
         <img class="center-block" src="img/d20.png" />
       </div>
-      <div class="panel-footer text-center">Roll me</div>
+      <div class="panel-footer text-center">d20</div>
     </div>
     
   </form>
@@ -501,7 +554,7 @@
     var footerText = rollDice(numDice, dieType);
     var $footer = $(this).children('div.panel-footer');
     
-    $footer.text("ROLLING");
+    $footer.text("Rolling d" + dieType);
     
     $footer.fadeOut('slow', function(){
       $footer.text(footerText).stop().fadeIn('slow');
